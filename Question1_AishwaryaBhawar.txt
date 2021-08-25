@@ -1,0 +1,18 @@
+function threesomeNumber(N) {
+    var found = 0;
+    var i = 1;
+    var numberOfDivisions = 1;
+    while (found < N) {
+        for (var j = 2; j <= i; j++) {
+            if (i % j === 0) {
+                numberOfDivisions++;
+            }
+        }
+        if (numberOfDivisions === 3) {
+            found++;
+            console.log(found + " = " + i);
+        }
+        numberOfDivisions = 1;
+        i++;
+    }
+}
